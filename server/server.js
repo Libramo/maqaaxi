@@ -1,4 +1,4 @@
-require("dotenv").config();
+// require("dotenv").config();
 const express = require("express");
 // const { Sequelize, DataTypes } = require("sequelize");
 const morgan = require("morgan");
