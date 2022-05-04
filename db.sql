@@ -17,7 +17,7 @@ CREATE TABLE reviews(
 
 INSERT INTO restos (id, name, location, price_range) values (12, 'Mc Donald', 'balbala', 5);
 
-SELECT * from restaurants 
+SELECT * from restaurants
     left join 
     (SELECT restaurant_id, COUNT(*), TRUNC(AVG(rating),1) as average_rating from reviews group by restaurant_id) reviews 
     ON restaurants.id = reviews.restaurant_id;

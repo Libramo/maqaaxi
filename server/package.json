@@ -6,7 +6,7 @@
     "node": "14.17.4"
   },
   "scripts": {
-    "start": "node /server/server.js",
+    "start": "nodemon server.js",
     "dev": "nodemon server.js",
     "build": "cd client && npm install && npm run build"
   },

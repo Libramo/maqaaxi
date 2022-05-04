@@ -64,15 +64,13 @@ const AddRestaurant = () => {
               <option value="5">$$$$$</option>
             </select>
           </div>
-          <div className="col">
-            <button
-              onClick={handleSubmit}
-              className="btn btn-primary"
-              type="submit"
-            >
-              Add
-            </button>
-          </div>
+          <button
+            onClick={handleSubmit}
+            className="col btn btn-primary"
+            type="submit"
+          >
+            Add
+          </button>
         </div>
       </form>
     </div>

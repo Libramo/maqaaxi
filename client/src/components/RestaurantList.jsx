@@ -6,7 +6,7 @@ import Skeleton from "@mui/material/Skeleton";
 import StarRating from "./StarRating";
 
 const RestaurantList = (props) => {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const skeletonArray = Array(10).fill("");
 
   const { restaurants, setRestaurants } = useContext(RestaurantsContext);
