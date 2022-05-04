@@ -18,8 +18,7 @@ app.get("/api/v1/restaurants", async (req, res) => {
   try {
     // const result = await db.query("select * from restaurants;");
     const restaurantRatingData = await db.query(
-      "SELECT * FROM restaurants LEFT JOIN (SELECT restaurant_id, COUNT(*), 
-      TRUNC(AVG(rating), 1) AS average_rating FROM reviews GROUP BY restaurant_id) reviews ON restaurants.id = reviews.restaurant_id;"
+      "SELECT * FROM restaurants LEFT JOIN (SELECT restaurant_id, COUNT(*), TRUNC(AVG(rating), 1) AS average_rating FROM reviews GROUP BY restaurant_id) reviews ON restaurants.id = reviews.restaurant_id;"
     );
 
     console.log(restaurantRatingData.rows);
@@ -35,7 +34,7 @@ app.get("/api/v1/restaurants", async (req, res) => {
   }
 });
 
-//************************************ CREATE a restaurant *********************************************
+//************************************ CREATE a restaurant *****************************************************
 app.post("/api/v1/restaurants", async (req, res) => {
   try {
     const results = await db.query(
@@ -127,7 +126,7 @@ app.post("/api/v1/restaurants/:id/addReview", async (req, res) => {
   }
 });
 
-port = 3030;
+port = process.env.PORT;
 app.listen(port, () => {
   console.log(`Server is up and listening on port ${port}`);
 });
