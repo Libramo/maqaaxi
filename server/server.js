@@ -10,8 +10,8 @@ const app = express();
 // app.use(morgan("tiny"));
 app.use(cors());
 app.use(express.json());
-// app.use(express.static(pathName.resolve(__dirname, "../client/build")));
-// app.use(express.static("public"));
+app.use(express.static(pathName.resolve(__dirname, "../client/build")));
+app.use(express.static("public"));
 
 //************************************ (READ) Getting all restaurant *********************************************
 app.get("/api/v1/restaurants", async (req, res) => {
