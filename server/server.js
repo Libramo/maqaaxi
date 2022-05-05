@@ -5,7 +5,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const db = require("./db");
 const app = express();
-// const pathName = require("path");
+const pathName = require("path");
 
 // app.use(morgan("tiny"));
 app.use(cors());
