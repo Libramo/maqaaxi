@@ -127,6 +127,7 @@ app.post("/api/v1/restaurants/:id/addReview", async (req, res) => {
 });
 
 port = process.env.PORT;
+console.log(port);
 app.listen(port, () => {
   console.log(`Server is up and listening on port ${port}`);
 });
