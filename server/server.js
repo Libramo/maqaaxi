@@ -1,4 +1,4 @@
-// require("dotenv").config();
+require("dotenv").config();
 const express = require("express");
 
 const morgan = require("morgan");
@@ -21,7 +21,7 @@ app.get("/api/v1/restaurants", async (req, res) => {
       "SELECT * FROM restaurants LEFT JOIN (SELECT restaurant_id, COUNT(*), TRUNC(AVG(rating), 1) AS average_rating FROM reviews GROUP BY restaurant_id) reviews ON restaurants.id = reviews.restaurant_id;"
     );
 
-    console.log(restaurantRatingData.rows);
+    // console.log(restaurantRatingData.rows);
     res.status(200).json({
       status: " success",
       results: restaurantRatingData.rows.length,
