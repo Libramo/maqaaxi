@@ -75,32 +75,6 @@ const RestaurantList = (props) => {
           </tr>
         </thead>
         <tbody>
-          {loading &&
-            skeletonArray.map((item, index) => {
-              return (
-                <tr key={index}>
-                  <td>
-                    <Skeleton />
-                  </td>
-                  <td>
-                    <Skeleton />
-                  </td>
-                  <td>
-                    <Skeleton />
-                  </td>
-                  <td>
-                    <Skeleton />
-                  </td>
-                  <td>
-                    <Skeleton />
-                  </td>
-                  <td>
-                    <Skeleton />
-                  </td>
-                </tr>
-              );
-            })}
-
           {restaurants &&
             restaurants.map((resto) => {
               return (
